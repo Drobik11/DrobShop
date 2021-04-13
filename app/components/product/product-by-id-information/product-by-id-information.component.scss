@@ -1,0 +1,196 @@
+
+
+.main {
+
+   .container {
+      width: 90%; 
+      max-width: 1200px;
+      margin: 0 auto;
+      position: relative;
+   }
+   
+   &__select {
+      background-color: rgb(238, 232, 232);
+      padding: 10px 20px;
+      border-radius: 6px;
+
+      option {
+         margin: 5px 0;
+         display: block;
+      }
+   }
+
+   &__back {
+      padding: 10px 15px;
+      display: block;
+      margin-bottom: 30px;
+      text-transform: capitalize;
+      border-radius: 5px;
+   }
+
+   &__back:hover {
+      background-color:rgb(101, 101, 104);
+      color:white;
+      transition: 0.3s;
+   }
+
+   &__row {
+      display: flex;
+   }
+
+   &__descr  {
+      display: flex;
+      
+   }
+
+   &__image{
+      margin-right: 40px;
+      img {
+        width: 95%;
+      }
+      
+   }
+
+   &__info {
+      font-size: 20px;
+      width: 22%;
+   }
+
+   &__name {
+      font-size: 20px;
+      position: relative;
+   }
+   &__name:after {
+      content: '';
+      width: 100%;
+      height: 2px;
+      background-color: rgb(117, 117, 122);
+      left: 0;
+      bottom: -5px;
+      position: absolute;
+   }
+   &__review {
+      margin: 20px 0 0 10px;
+   }
+   &__rating {
+      align-items: center;
+      text-align: center;
+   }
+
+   &__price {
+      text-transform: uppercase;
+      margin: 20px 0;
+      position: relative;
+   }
+   &__price:before {
+      content: '';
+      width: 100%;
+      height: 2px;
+      background-color: rgb(117, 117, 122);
+      left: 0;
+      top: -10px;
+      position: absolute;
+   }
+   &__price:after {
+      content: '';
+      width: 100%;
+      height: 2px;
+      background-color: rgb(117, 117, 122);
+      left: 0;
+      bottom: -10px;
+      position: absolute;
+   }
+ 
+   &__description {
+      font-size: 15px;
+   }
+
+   &__card {
+      width: 350px;
+      margin-left: 20px;
+      border: 1px solid black;
+      min-height: 200px;
+      max-height: 250px;
+      min-width: 200px;
+      max-width: 400px;
+      font-size: 20px;
+      
+   }
+   
+
+   &__prices {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid black;
+      padding: 15px;
+   }
+
+   &__status {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid black;
+      padding: 15px;
+   }
+
+   &__qty {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid black;
+      padding: 15px;
+   }
+
+   &__btn button{
+      display: block;
+      margin: 15px auto;
+      width: 80%;
+      border-radius: 5px;
+      background-color: black;
+      color: white;
+      font-weight: 700;
+      padding: 10px;
+   }
+   &__btn button:hover{
+      background-color: rgb(199, 195, 195);
+      color: black;
+      transition: 0.3s;
+   }
+
+
+   &__star {
+      color: rgb(255, 238, 0);
+      font-size: 20px;
+   }
+
+   &__star0:before {
+      content: '☆☆☆☆☆';
+   }
+   &__star1:before {
+      content: '★☆☆☆☆';
+   }
+
+   &__star2:before {
+      content: '★★☆☆☆';
+   }
+   &__star3:before {
+      content: '★★★☆☆';
+   }
+   &__star4:before {
+      content: '★★★★☆';
+   }
+   &__star5:before {
+      content: '★★★★★';
+   }
+}
+
+
+.loader-container {
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   opacity: 0.8;
+   z-index: 99;
+
+   &::ng-deep .mat-progress-spinner circle, .mat-spinner circle {
+       stroke: rgb(13, 99, 212);
+   }
+}

@@ -1,0 +1,4 @@
+<div class="app__input">
+   <input type="text" placeholder="Search Products..." [(ngModel)]='searchProduct'>
+   <app-app-btn [searchProductBtn]='searchProduct' (zeroing)='zeroing($event)'></app-app-btn>
+</div>
