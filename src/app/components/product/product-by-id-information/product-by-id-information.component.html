@@ -1,0 +1,46 @@
+<div class="main">
+  <div class="container">
+    <button class="main__back" routerLink=''>
+      Go back
+    </button>
+    <!-- !loader -->
+    <div *ngIf='loaderservice.isLoading | async' class="loader-container">
+      <mat-spinner style="top: 30%; left: 50%"></mat-spinner>
+    </div>
+    <!-- !loader -->
+    <div class="main__row" *ngIf='product'>
+
+      <div class="main__descr">
+        <div class="main__image">
+          <img src="https://nodejs-final-mysql.herokuapp.com{{product.products.image}}" alt="{{product.name}}">
+        </div>
+        <div class="main__info">
+          <h3 class="main__name">{{product.products.name}}</h3>
+          <p>
+            <span class="main__star main__star{{product.products.rating}}"></span>
+            <span class="main__review">{{product.products.numReviews}} reviews</span>
+          </p>
+          <p class="main__price">Price: {{product.products.price}} $</p>
+          <p class="main__description">{{product.products.description}}</p>
+        </div>
+      </div>
+      <div class="main__card">
+        <div class="main__prices">
+          <span>Price:</span>
+          <span>{{product.products.price}} $</span>
+        </div>
+        <div class="main__status">
+          <span>Status:</span>
+          <span>in stock</span>
+        </div>
+        <div class="main__qty">
+          <span>Qty:</span>
+          <app-select [product]='product' (sendSelectedCount)='takeSelectedCount($event)'></app-select>
+        </div>
+        <div class="main__btn">
+          <button (click)=buyProduct(product)>Add to card</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

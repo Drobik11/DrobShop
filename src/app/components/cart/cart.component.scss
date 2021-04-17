@@ -1,0 +1,67 @@
+.cart {
+   .container {
+      max-width: 1100px;
+      width: 90%;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: row;
+      position: relative;
+   }
+
+   &__item-title {
+      font-size: 35px;
+   }
+   
+   &__row {
+      width: 70%;
+   }
+
+   &__total {
+      width: 30%;
+      padding: 25px;
+      max-height: 250px;
+      position: absolute;
+      top: 0;
+      right: 0;
+   }
+
+   &__descr {
+      padding: 10px;
+      border: 1px solid rgb(98, 49, 233);
+
+      h2 {
+         font-weight: 650;
+         font-size: 20px;
+         text-transform: uppercase;
+         color: rgb(102, 102, 102);
+      }
+
+      p {
+         color: rgb(102, 102, 102);
+         font-size: 15px;
+      }
+   }
+
+   &__checkout {
+      padding: 10px;
+      border-bottom: 1px solid rgb(102, 102, 102);
+      border-right: 1px solid rgb(102, 102, 102);
+      border-left: 1px solid rgb(102, 102, 102);
+
+      button {
+         display: block;
+         bottom: 0 auto;
+         background-color: black;
+         color: white;
+         padding: 10px 30px;
+         text-transform: uppercase;
+
+         &:hover {
+            background-color: white;
+            color: black;
+            transition: 0.3s;
+         }
+      }
+   }
+
+}
