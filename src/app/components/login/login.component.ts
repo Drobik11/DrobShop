@@ -17,7 +17,7 @@ export class LoginComponent implements OnInit {
   }
 
   logIn() {
-    if (this.password === 'drob' && this.email === 'drob@gmail.com') {
+    if (this.password === 'admin' && this.email === 'admin@gmail.com') {
       localStorage.setItem('user', this.password);
       this.loginService.newUserStatus();
     } else {

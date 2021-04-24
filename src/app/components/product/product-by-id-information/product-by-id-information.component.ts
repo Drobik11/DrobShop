@@ -21,14 +21,16 @@ export class ProductByIdInformationComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    // Открываем описание товара
+    
     this.id = this.activateRoute.snapshot.params['id'];
     this.http.get(`https://nodejs-final-mysql.herokuapp.com/products/${this.id}`).subscribe(res => {
       this.product = res;
+      console.log(this.product)
       for (let i = 1; i <= this.product.countInStock; i++) {
+
         this.counts.push(i);
       }
-      // Кодга пустой масив первое значение пушим
+      
       this.product = Object.assign({}, {
         products: this.product,
         count: this.selectedCount
@@ -46,9 +48,9 @@ export class ProductByIdInformationComponent implements OnInit {
     this.takeSelectedCount(this.selectedCount);
   }
 
-  // Принимаем выбраное к-во товара
+  
   takeSelectedCount(value: number) {
-    // console.log(value);
+  
     this.product.count = +value;
   }
 
