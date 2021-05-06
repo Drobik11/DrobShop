@@ -26,7 +26,8 @@ import { SelectComponent } from './components/select/select.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // !
 import { MatProgressBarModule } from '@angular/material/progress-bar';
-import { MatProgressSpinnerModule } from '@angular/material/progress-spinner'
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { ProductByIdReviewsComponent } from './components/product/product-by-id-reviews/product-by-id-reviews.component'
 
 
 @NgModule({
@@ -48,6 +49,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner'
     ProductByIdInformationComponent,
     SearchComponent,
     SelectComponent,
+    ProductByIdReviewsComponent,
   ],
   imports: [
     BrowserModule,
